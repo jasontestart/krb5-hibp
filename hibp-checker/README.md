@@ -10,7 +10,8 @@ To build and install this program, you will need to:
 1. build and install the
 [libhibp](https://github.com/jasontestart/libhibp) library.
 2. Install the `libConfuse` library and associated development libraries.
-On Debian
+
+On Debian:
 ```bash
 apt update
 apt install libconfuse-dev
