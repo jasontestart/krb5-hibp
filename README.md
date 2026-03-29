@@ -1,8 +1,8 @@
 # krb5-hibp
 
 This respository contains software, for both MIT and Heimdal implementations of Kerberos, that uses the password quality interfaces of
-the Key Distribution Center (KDC) to interface with the [Have I Been Pwned Pwned](https://haveibeenpwned.com/) Password API to reject attempted 
-password changes to known, breached passwords.
+the Kerberos Administration Server (kadmind) to interface with the [Have I Been Pwned Pwned](https://haveibeenpwned.com/) Password API
+to reject attempted password changes to known, breached passwords.
 
 The work of interfacing with the Pwned Password API is done using the [libhibp](https://github.com/jasontestart/libhibp) shared object, using k-Anonymity.
 
