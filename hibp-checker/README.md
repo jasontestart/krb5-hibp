@@ -1,6 +1,6 @@
 # hibp-checker
 
-An external password quality program, for the Heimdal Kerberos KDC,
+An external password quality program, for the Heimdal Kerberos Administration Server,
 that interacts with the [Have I Been Pwned](https://haveibeenpwned.com/) 
 **Pwned Password** API using k-Anonymity.
 
