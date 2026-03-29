@@ -9,9 +9,8 @@ that interacts with the [Have I Been Pwned](https://haveibeenpwned.com/)
 To build and install this program, you will need to:
 1. build and install the
 [libhibp](https://github.com/jasontestart/libhibp) library.
-2. Install the libConfuse library and associated development libraries.
-
-### On Debian
+2. Install the `libConfuse` library and associated development libraries.
+On Debian
 ```bash
 apt update
 apt install libconfuse-dev
@@ -34,7 +33,7 @@ policies = external-check
 external_program = /usr/local/bin/hibp-checker
 ```
 
-With no confiration, the `hibp-checker` program, through `libhibp`, will take the SHA1 hash of the provided
+With no configuration, the `hibp-checker` program, through `libhibp`, will take the SHA1 hash of the provided
 password and, using k-Anonymity, will lookup the hash using the 
 [Pwned Password API](https://haveibeenpwned.com/API/v3#PwnedPasswords)
 at `https://api.pwnedpasswords.com/range/`.
