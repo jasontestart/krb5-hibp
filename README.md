@@ -8,11 +8,11 @@ The work of interfacing with the Pwned Password API is done using the [libhibp](
 
 ## MIT Kerberos
 
-Implemented as a password quality (pwqual) module [krb5-hibp.so](https://github.com/jasontestart/krb5-hibp/mit).
+Implemented as a password quality (pwqual) module [krb5-hibp.so](https://github.com/jasontestart/krb5-hibp/tree/main/mit).
 
 ## Heimdal Kerberos
 
-Implemented as a simple external checking program [hibp-checker](https://github.com/jasontestart/krb5-hibp/hibp-checker).
+Implemented as a simple external checking program [hibp-checker](https://github.com/jasontestart/krb5-hibp/tree/main/hibp-checker).
 
 ## Note
 
