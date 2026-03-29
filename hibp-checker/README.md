@@ -13,8 +13,8 @@ To build and install this program, you will need to:
 
 On Debian:
 ```bash
-apt update
-apt install libconfuse-dev
+sudo apt update
+sudo apt install libconfuse-dev
 ```
 
 ## Building & Installing
@@ -22,12 +22,12 @@ apt install libconfuse-dev
 Simply run the following:
 ```bash
 make
-make install
+sudo make install
 ```
 
 ## Program Usage
-This program is designed to be invoked by a Heimdal KDC server using the `external-check` password
-quality policy. This would normally be accomplished by the following in `/etc/heimdal-kdc/kdc.conf`:
+This program is designed to be invoked by a Heimdal `kadmind` server using the `external-check` password
+quality policy. With Debian, this would normally be accomplished by the following in `/etc/heimdal-kdc/kdc.conf`:
 ```ini
 [password_quality]
 policies = external-check
@@ -77,7 +77,7 @@ controls in place (e.g., MFA, network segmentation). You can define a threshold 
 return a rejection message when the password is in the Pwned Password database and the number of breaches 
 found exceeds the defined threshold. This value must be a whole number.
 
-Example: `threshold = 1000`: The program will catch the password `abc123`, but not the passphrase `This is a test.`, 
+Example: `threshold = 1000` The program will catch the password `abc123`, but not the passphrase `This is a test.`, 
 even though both are in the Pwned Password database.
 
 When this value is absent, the default value for threashold is zero.
