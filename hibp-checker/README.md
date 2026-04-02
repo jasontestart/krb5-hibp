@@ -17,6 +17,14 @@ sudo apt update
 sudo apt install libconfuse-dev
 ```
 
+On RHEL-based distributions, you will need to enable the _Extra Packages for Enterprise Linux (EPEL)_ repository to
+get the LibConfuse development library. The steps for this may vary based on the distribution. 
+On Rocky Linux, the following should work assuming you already have the _Development Tools_ installed:
+```bash
+sudo dnf install epel-release
+sudo dnf install libconfuse-devel
+```
+
 ## Building & Installing
 
 Simply run the following:
