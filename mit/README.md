@@ -9,16 +9,14 @@ To build and install this module, you will need to:
 1. Build and install the [libhibp](https://github.com/jasontestart/libhibp) library.
 2. Install the MIT Kerberos development libraries. 
 
-### Debian-based installation
+On Debian-based distributions, this should work:
 ```bash
 sudo apt update
 sudo apt install krb5-config libkrb5-dev libkrb5-3
 ```
 
-### RHEL-based installation
-```bash
-sudo dnf install TBD 
-```
+On RHEL-based distributions, the MIT Kerberos development libraries appear to be installed
+as part of the installation of the _Development Tools_ needed to build `libhibp`.  
 
 ## Building & Installing
 
