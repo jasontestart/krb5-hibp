@@ -36,8 +36,8 @@ int main(void) {
 
     cfg_opt_t opts[] = {
         CFG_INT("threshold", 0, CFGF_NONE),
-	CFG_STR("proxy", NULL, CFGF_NONE),
-	CFG_STR("api", NULL, CFGF_NONE),
+        CFG_STR("proxy", NULL, CFGF_NONE),
+        CFG_STR("api", NULL, CFGF_NONE),
         CFG_END()
     };
 
@@ -47,7 +47,7 @@ int main(void) {
     if(cfg_parse_fp(cfg, conf_file) != CFG_PARSE_ERROR) {
         threshold = cfg_getint(cfg, "threshold");
         api_url = cfg_getstr(cfg, "api");
-	proxy_url = cfg_getstr(cfg, "proxy");
+        proxy_url = cfg_getstr(cfg, "proxy");
     }
 
     cfg_free(cfg);
@@ -73,7 +73,7 @@ ignoreconfig:
         principal[strcspn(principal, "\r\n")] = '\0';
     } else {
         puts(input_error);
-	return(1);
+        return(1);
     }
 
     if (fgets(line_two, sizeof(line_two), stdin)  && !strncmp(line_two, "new-password: ", 14)) {
@@ -82,13 +82,13 @@ ignoreconfig:
         password[strcspn(password, "\r\n")] = '\0';
     } else {
         puts(input_error);
-	return(1);
+        return(1);
     }
 
     if (fgets(line_three, sizeof(line_three), stdin)  && strncmp(line_three, "end\n", 4)) {
         puts(input_error);
-	retval = 1;
-	goto cleanup;
+        retval = 1;
+        goto cleanup;
     }
 
     /* Check the Pwned Password database. */
@@ -96,8 +96,8 @@ ignoreconfig:
 
     if (occurences < 0) {
         puts("API Error");
-	retval = 1;
-	goto cleanup;
+        retval = 1;
+        goto cleanup;
     }
 
     if (occurences > threshold)
